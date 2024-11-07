@@ -1,30 +1,41 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void printV(vector<int> &v){
-    for(int i=0; i<v.size(); i++){
-        cout << v[i] <<" ";
-    }
-    cout<<endl;
-}
-
 int main(){
     int a[3] = {1, 2, 3};
-    vector<int> v;
+    do{
+        for(int i : a) cout<< i <<' ';
+        cout<< '\n';
+    }while(next_permutation(a, a+3)); // while(next_permutation(&a[0], &a[0]+3));
     
-    for(int i=0; i<3; i++) v.push_back(a[i]);
-
+    cout << '\n';
+    vector<int> v1 = {2, 1, 3};
+    // sort(b.begin(), b.end());
     do{
-        printV(v);
-    }while(next_permutation(v.begin(), v.end()));
+        for(int i : v1) cout<< i <<' ';
+        cout<< '\n';
+    }while(next_permutation(v1.begin(), v1.end())); 
 
-    cout << "--------------"<<endl;
-    v.clear();
-
-    for(int i=2; i>=0; i--) v.push_back(a[i]);
-
+    // 5개중에 두개만 뽑는 경우
+    cout << '\n';
+    vector<int> v2 = {2, 1, 3, 100, 200};
+    sort(v2.begin(), v2.end());
     do{
-        printV(v);
-    }while(prev_permutation(v.begin(), v.end()));
-    return 0;
+        for(int i = 0; i<2; i++){
+            cout<< v2[i] <<' ';
+        } 
+        cout<< '\n';
+    }while(next_permutation(v2.begin(), v2.end())); 
+
+    // next_permutation의 원리
+    cout << '\n';
+    vector<int> v3 = {2, 1, 3};
+    bool flag =1;
+    sort(v3.begin(), v3.end());
+    do{
+        flag = next_permutation(v3.begin(), v3.end());
+        cout<<"flag"<<flag<<'\n';
+        for(int i : v3) cout<<i<<" ";
+        cout<< '\n';
+    }while(flag); 
 }

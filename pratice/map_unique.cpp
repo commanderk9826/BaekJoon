@@ -27,5 +27,3 @@ int main(){
     }
     for(int i : ret) cout<<i<<'\n';
 }
-
-
