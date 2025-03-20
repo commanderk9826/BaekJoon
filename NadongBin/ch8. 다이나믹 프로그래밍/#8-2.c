@@ -7,10 +7,7 @@
 2. 가능하다면 재귀함수를 이용하는 Top-down 보다는 Bottom-up방식으로 구현하는 것을 권장
 -> 시스템 상 재귀 함수의 스택 크기가 한정되어 있음
 */
-
-
 // 피보나치 수열 by Bottom-up
-
 #include <stdio.h>
 
 #define MAX 100

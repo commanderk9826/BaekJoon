@@ -36,7 +36,7 @@ int main(){
     
 */
 
-// 피보나치 수열 by 메모이제이션 기법
+// 피보나치 수열 by Top-down(메모이제이션 기법)
 #include <stdio.h>
 
 #define MAX 100
